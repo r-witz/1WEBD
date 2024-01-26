@@ -23,7 +23,7 @@ fetch(`https://www.omdbapi.com/?apikey=b7685432&i=${param.get("id")}&plot=full`)
     rating.innerHTML = data.imdbRating;
 
     let date = document.createElement("p");
-    let rawDate = new Date(data.Released);
+    let rawDate = new Date(data.DVD);
     let day = String(rawDate.getDate()).padStart(2, '0')
     let month = String((rawDate.getMonth() + 1)).padStart(2, '0')
     let year = rawDate.getFullYear();
