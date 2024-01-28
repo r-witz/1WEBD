@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: auto;
+    background-size: cover;
+}
+
+#container {
+    background-image: url("https://i0.wp.com/thinkmonsters.com/speakinghuman/media/wp-content/uploads/John-Wick-Posters-Rule.jpg?fit=1280%2C640&ssl=1");
+    /* background-image: url("imageFilm"); */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#movieContainer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 5%;
+    width: 70%;
+    height: 50vh;
+}
+
+#imagePlaceholder {
+    width: 30%;
+    height: 50vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    width: 100%;
+    height: 80%;
+}
+
+button {
+    margin-top: 4%;
+    width: 40%;
+    height: 12%;
+    background: none;
+}
+
+p, h1, button{
+    color: white;
+}
