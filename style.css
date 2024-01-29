@@ -20,29 +20,34 @@ body {
 #movieContainer {
     background-color: black;
     display: flex;
-    flex-direction: column;
-    align-items: start;
-    padding-left: 5%;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5%;
     width: 70%;
-    height: 50vh;
+    height: 80vh;
+    border: 3px solid white;
+    border-right: none;
 }
 
 #imagePlaceholder {
     width: 30%;
-    height: 50vh;
+    height: 80vh;
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 5%;
+    border: 3px solid white;
 }
 
 img {
-    width: 100%;
+    width: 80%;
     height: 80%;
 }
 
-button {
-    margin-top: 4%;
+#watch {
+    margin-top: 10px;
     width: 40%;
     height: 12%;
     background: none;
@@ -50,4 +55,11 @@ button {
 
 p, h1, button{
     color: white;
+    font-size: 15px;
+}
+
+h1 {
+    font-size: 10vh;
+    letter-spacing: 10px;
+    margin: 0;
 }
