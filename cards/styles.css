@@ -9,24 +9,20 @@ body {
 .card {
   position: relative;
   width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid black;
+  border-radius: 30px;
   overflow: hidden;
-  margin: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card img {
   width: 100%;
   height: auto;
-  object-fit: cover;
 }
 
 .card-content {
   position: absolute;
   bottom: 0;
-  left: 0;
-  padding: 15px;
+  padding: 5px;
   color: white;
   width: 100%;
   backdrop-filter: blur(20px);
@@ -36,16 +32,18 @@ body {
 h3,
 p {
   margin: 0;
+  padding: 0;
   color: black;
 }
 
 button {
-  background-color: #4caf50;
+  background-color: #4CAF50;
   color: white;
-  border: none;
-  padding: 10px;
+  padding: 4px;
+  margin-top: 10px;
   cursor: pointer;
-  width: 50%;
+  width: 97%;
+  border-radius: 20px ;
 }
 
 button:hover {
@@ -55,5 +53,13 @@ button:hover {
 .card-content p {
   transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
   overflow: hidden;
-  max-height: 100%;
+}
+
+#genre {
+  font-weight: bold;
+  background-color: red;
+  border-radius: 20px;
+  border: 1px solid black;
+  width: fit-content;
+  padding: 2px;
 }
