@@ -1,0 +1,23 @@
+.search-bar {
+    display: flex;
+    border: 2px solid cyan;
+    border-radius: 5px;
+}
+  
+.search-input {
+    flex: 1;
+    border: none;
+}
+  
+.search-button {
+    background-color: cyan;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+  
+.search-button img {
+    height: 20px;
+    width: auto;
+}
+  
