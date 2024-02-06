@@ -1,7 +1,14 @@
 let pageNb = 1;
+const param = new URLSearchParams(window.location.search);
+
+if (param.has("s")) {
+    let searchInput = param.get("s").replace(/\+/g, " ");
+    document.getElementById("search-input").value = searchInput;
+    searchApi(false);
+}
 
 function searchApi(fromScroll) {
-  let input = document.getElementById("inputField").value;
+  let input = document.getElementById("search-input").value;
   input = input.replace(/\s/g, "+");
 
   const url = `https://www.omdbapi.com/?apikey=b7685432&page=${pageNb}&s=${input}`;
@@ -33,7 +40,7 @@ function searchApi(fromScroll) {
     });
 }
 
-document.getElementById("apiForm").addEventListener("submit", function (event) {
+document.getElementById("search-bar").addEventListener("submit", function (event) {
   event.preventDefault();
   document.getElementById("movieList").innerHTML = "";
   searchApi(false);
@@ -44,7 +51,7 @@ window.onscroll = infiniteScroll;
     let isExecuted = false;
 
     function infiniteScroll() {
-        if (window.scrollY > (document.body.offsetHeight - window.outerHeight) && !isExecuted) {
+        if (window.scrollY >= (document.body.offsetHeight - window.outerHeight) && !isExecuted) {
             isExecuted = true;
             pageNb++;
 
