@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search</title>
+    <link rel="stylesheet" href="./search/search.css" />
+  </head>
+  <body>
+    <img src="./assets/homepage-bg.webp"/>
+    <div id="main-container">
+      <h1>CinePlex</h1>
+      <form id="search-bar">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search more films..."
+        />
+        <button id="search-button">
+          <img src="./assets/loupe.png" />
+        </button>
+      </form>
+      <div id="error"></div>
+    </div>
+    <div id="movieList"></div>
+    <script src="./search/search-api.js"></script>
+    <script src="./search/searchScrollDown.js"></script>
+    <script src="./search/hSearchCarousel.js"></script>
+  </body>
+</html>
