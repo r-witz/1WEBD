@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="screenContainer">
-        <div class="screen">
-            <img class="cinemaEffect" src="./assets/oldCinemaEffect.gif">
-            <input type="text" id="searchBar" placeholder="Search...">
-            <button id="searchButton">Search</button>
-        </div>
-        <img class="chairs" src="./assets/chair.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="./homepage/homepage.css" />
+  </head>
+  <body>
+    <img src="./assets/homepage-bg.webp" />
+    <div id="main-container">
+      <h1>CinePlex</h1>
+      <form id="search-bar">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search more films..."
+        />
+        <button id="search-button">
+          <img src="./assets/loupe.png" />
+        </button>
+      </form>
+      <img src="./assets/arrow.png" id="arrow" />
     </div>
-
-    <div class="filmsTendancesContainer">
-        <div class="filmsTendances">
-            <h1>Films tendances</h1>
-            <button class="filmsTendancesButton">Voir les films</button>
-            <div class="filmsTendancesList">
-                <p>TEST</p>
-                <p>TEST</p>
-                <p>TEST</p>
-                <p>TEST</p>
-            </div>
-        </div>
+    <div id="trending">
+      <h2>Trending</h2>
+      <div id="trending-movies">
+        <button id="left">Left</button>
+        <div id="movie-list"></div>
+        <button id="right">Right</button>
+      </div>
     </div>
-
-    <script src="script.js"></script>
-</body>
+    <script src="./homepage/homepage-search.js"></script>
+    <script src="./homepage/homepage-trending.js"></script>
+    <script src="./homepage/homepageArrow.js"></script>
+  </body>
 </html>
