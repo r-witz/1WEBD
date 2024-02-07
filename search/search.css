@@ -32,6 +32,14 @@ body > img {
   height: 900px;
 }
 
+#back {
+  position: absolute;
+  top: 4vh;
+  left: 2vw;
+  width: 1.5vw;
+  rotate: 180deg;
+}
+
 h1 {
   font-size: 8rem;
   font-weight: 800;
@@ -123,17 +131,4 @@ h1 {
   overflow: hidden;
   text-overflow: ellipsis;
   color: white;
-}
-
-#back  {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: transparent;
-  border: none;
-  font-size: 40px;
-  color: white;
-  margin: 20px;
-  cursor: pointer;
-  z-index: 1;
 }

@@ -36,9 +36,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
 }
 
+#back {
+  position: absolute;
+  top: 4vh;
+  left: 2vw;
+  width: 1.5vw;
+  rotate: 180deg;
+}
 
 #container {
   width: 90vw;
@@ -144,16 +150,7 @@ ul > li {
   color: #fdedad;
 }
 
-#back  {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 5vw;
-  background-color: transparent;
-  border: none;
-  margin-bottom: 50px;
-  margin-right: 80px;
-  cursor: pointer;
-  z-index: 1;
-  font-size: 30px;
-}
+/* Responsive styles */
+
+
+

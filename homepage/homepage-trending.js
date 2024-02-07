@@ -20,11 +20,10 @@ function loadTrendingFilms() {
     if (i >= arr.length) {
       return;
     }
-    let url = `https://www.omdbapi.com/?apikey=b7685432&plot=short&i=${arr[i]}`;
+    let url = `https://www.omdbapi.com/?apikey=b7685432&i=${arr[i]}`;
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        
         let movieCard = document.createElement("a");
         movieCard.classList.add("movieCard");
         movieCard.href = `./movie.html?id=${data.imdbID}`;
@@ -36,6 +35,7 @@ function loadTrendingFilms() {
         moviePlot.innerHTML = data.Plot;
 
         document.getElementById("movie-list").appendChild(movieCard);
+        movieCard.appendChild(moviePlot);
         movieCard.appendChild(movieTitle);
         movieCard.appendChild(moviePoster);
       });
