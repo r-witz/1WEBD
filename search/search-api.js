@@ -36,13 +36,14 @@ function searchApi(fromScroll) {
             movieCard.appendChild(moviePoster);
           }
         });
-      } else {console.log(data.Error)}
+      }
     });
 }
 
 document.getElementById("search-bar").addEventListener("submit", function (event) {
   event.preventDefault();
   document.getElementById("movieList").innerHTML = "";
+  pageNb = 1;
   searchApi(false);
 });
 
