@@ -124,3 +124,16 @@ h1 {
   text-overflow: ellipsis;
   color: white;
 }
+
+#back  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 40px;
+  color: white;
+  margin: 20px;
+  cursor: pointer;
+  z-index: 1;
+}

@@ -171,12 +171,32 @@ h2 {
   aspect-ratio: 1/1.3;
 }
 
+
 .movieCard h3 {
   font-weight: 800;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   color: white;
+}
+
+.movieCard p {
+  color: white;
+  font-style: italic;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#left, #right {
+  width: 125px;
+  margin: 0px 30px 8vh;
+}
+
+#left { 
+  transform: rotate(180deg);
 }
 
 /* Responsive styles */
