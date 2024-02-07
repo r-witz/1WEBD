@@ -1,40 +1,40 @@
 let pageNb = 0;
-var movieList = document.getElementById("movie-list");
-let arr = [
-  "tt0892769",
-  "tt1646971",
-  "tt2386490",
-  "tt0092099",
-  "tt1745960",
-  "tt2015381",
-  "tt3896198",
-  "tt6791350",
-  "tt0119217",
-  "tt15398776",
-  "tt2084970",
-  "tt3907584",
+const movieList = document.getElementById("movie-list");
+const apikey = "b7685432";
+const moviesToLoad = [
+  "tt0892769", "tt1646971", "tt2386490", "tt0092099", "tt1745960",
+  "tt2015381", "tt3896198", "tt6791350", "tt0119217", "tt15398776",
+  "tt2084970", "tt3907584"
 ];
 
 function loadTrendingFilms() {
-  for (let i = pageNb * 6; i < (pageNb + 1) * 6; i++) {
-    if (i >= arr.length) {
+  const batchSize = 6;
+  const startIndex = pageNb * batchSize;
+  const endIndex = (pageNb + 1) * batchSize;
+
+  for (let i = startIndex; i < endIndex; i++) {
+    if (i >= moviesToLoad.length) {
       return;
     }
-    let url = `https://www.omdbapi.com/?apikey=b7685432&i=${arr[i]}`;
+
+    const url = `https://www.omdbapi.com/?apikey=${apikey}&i=${moviesToLoad[i]}`;
     fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
-        let movieCard = document.createElement("a");
+      .then(response => response.json())
+      .then(data => {
+        const movieCard = document.createElement("a");
         movieCard.classList.add("movieCard");
         movieCard.href = `./movie.html?id=${data.imdbID}`;
-        let moviePoster = document.createElement("img");
+
+        const moviePoster = document.createElement("img");
         moviePoster.src = data.Poster;
-        let movieTitle = document.createElement("h3");
+
+        const movieTitle = document.createElement("h3");
         movieTitle.innerHTML = data.Title;
-        let moviePlot = document.createElement("p");
+
+        const moviePlot = document.createElement("p");
         moviePlot.innerHTML = data.Plot;
 
-        document.getElementById("movie-list").appendChild(movieCard);
+        movieList.appendChild(movieCard);
         movieCard.appendChild(moviePlot);
         movieCard.appendChild(movieTitle);
         movieCard.appendChild(moviePoster);
@@ -45,7 +45,8 @@ function loadTrendingFilms() {
 loadTrendingFilms();
 
 movieList.addEventListener("scroll", function () {
-  if (movieList.scrollLeft >= movieList.scrollWidth - movieList.clientWidth - 60) {
+  const scrollThreshold = 60;
+  if (movieList.scrollLeft >= movieList.scrollWidth - movieList.clientWidth - scrollThreshold) {
     pageNb++;
     loadTrendingFilms();
   }

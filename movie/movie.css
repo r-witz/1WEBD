@@ -40,6 +40,7 @@ body {
 
 #back {
   position: absolute;
+  cursor: pointer;
   top: 4vh;
   left: 2vw;
   width: 1.5vw;

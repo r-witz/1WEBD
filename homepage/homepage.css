@@ -19,6 +19,7 @@ img {
 body {
   background-image: url("../assets/background-texture.webp");
   background-size: cover;
+  margin-bottom: 8vh;
 }
 
 body > img {
@@ -113,7 +114,6 @@ h2 {
   overflow-x: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  margin: 0 0 8vh 0;
   padding: 1vh 1vw;
   display: flex;
   align-items: center;
