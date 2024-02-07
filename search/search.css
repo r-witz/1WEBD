@@ -81,7 +81,7 @@ h1 {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  gap: 6vw;
+  gap: 2vw;
   width: 90vw;
 }
 
@@ -95,7 +95,7 @@ h1 {
 .movieCard {
   display: flex;
   flex-direction: column-reverse;
-  width: 26vw;
+  width: 21vw;
   height: fit-content;
   padding: 1.3rem;
   gap: 1rem;
