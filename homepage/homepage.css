@@ -125,22 +125,24 @@ h2 {
 }
 
 #left {
-  width: 2.5vw;
+  width: 5vw;
   cursor: pointer;
   position: absolute;
-  left: 20px;
+  left: 0;
   top: 50%;
   transform: translateY(50%);
   rotate: 180deg;
+  margin: 0 0 8vh 0;
 }
 
 #right {
-  width: 2.5vw;
+  width: 5vw;
   cursor: pointer;
   position: absolute;
-  right: 20px;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
+  margin: 0 0 8vh 0;
 }
 
 .movieCard {
@@ -196,24 +198,6 @@ h2 {
   text-overflow: ellipsis;
 }
 
-.movieCard p {
-  color: white;
-  font-style: italic;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-#left, #right {
-  width: 125px;
-  margin: 0px 30px 8vh;
-}
-
-#left { 
-  transform: rotate(180deg);
-}
 
 /* Responsive styles */
 
