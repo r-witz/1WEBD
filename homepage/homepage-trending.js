@@ -1,22 +1,22 @@
 let pageNb = 0;
+var movieList = document.getElementById("movie-list");
 let arr = [
-    "tt0892769",
-    "tt1646971",
-    "tt2386490",
-    "tt0092099",
-    "tt1745960",
-    "tt2015381",
-    "tt3896198",
-    "tt6791350",
-    "tt0119217",
-    "tt15398776",
-    "tt2084970",
-    "tt3907584",
-    "tt4614584"
-  ];
+  "tt0892769",
+  "tt1646971",
+  "tt2386490",
+  "tt0092099",
+  "tt1745960",
+  "tt2015381",
+  "tt3896198",
+  "tt6791350",
+  "tt0119217",
+  "tt15398776",
+  "tt2084970",
+  "tt3907584",
+];
 
 function loadTrendingFilms() {
-  for (let i = pageNb*13; i < (pageNb+1)*13; i++) {
+  for (let i = pageNb * 6; i < (pageNb + 1) * 6; i++) {
     if (i >= arr.length) {
       return;
     }
@@ -31,8 +31,11 @@ function loadTrendingFilms() {
         moviePoster.src = data.Poster;
         let movieTitle = document.createElement("h3");
         movieTitle.innerHTML = data.Title;
+        let moviePlot = document.createElement("p");
+        moviePlot.innerHTML = data.Plot;
 
         document.getElementById("movie-list").appendChild(movieCard);
+        movieCard.appendChild(moviePlot);
         movieCard.appendChild(movieTitle);
         movieCard.appendChild(moviePoster);
       });
@@ -40,3 +43,10 @@ function loadTrendingFilms() {
 }
 
 loadTrendingFilms();
+
+movieList.addEventListener("scroll", function () {
+  if (movieList.scrollLeft >= movieList.scrollWidth - movieList.clientWidth - 60) {
+    pageNb++;
+    loadTrendingFilms();
+  }
+});

@@ -38,6 +38,14 @@ body {
   align-items: center;
 }
 
+#back {
+  position: absolute;
+  top: 4vh;
+  left: 2vw;
+  width: 1.5vw;
+  rotate: 180deg;
+}
+
 #container {
   width: 90vw;
   min-height: 80vh;
