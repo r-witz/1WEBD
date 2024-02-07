@@ -39,13 +39,6 @@ body {
   overflow-x: hidden;
 }
 
-#back {
-  position: absolute;
-  top: 4vh;
-  left: 2vw;
-  width: 1.5vw;
-  rotate: 180deg;
-}
 
 #container {
   width: 90vw;
@@ -151,7 +144,7 @@ ul > li {
   color: #fdedad;
 }
 
-button  {
+#back  {
   position: absolute;
   bottom: 0;
   right: 0;
